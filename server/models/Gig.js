@@ -2,27 +2,25 @@ const { Sequelize } = require('sequelize')
 const db = require('../config/db')
 
 
-const Gig = db.define('gig', {  
+const Gig = db.define('gig', {
   title: {
-    type : Sequelize.STRING
+    type: Sequelize.STRING
   },
-  technology: {
-    type : Sequelize.STRING
-  },
-  budget: {
-    type : Sequelize.STRING
+  technologies: {
+    type: Sequelize.STRING
   },
   description: {
-    type : Sequelize.STRING
+    type: Sequelize.STRING
+  },
+  budget: {
+    type: Sequelize.STRING
   },
   contact_email: {
-    type : Sequelize.STRING
-  },
-  createdAt: {
-    type : Sequelize.STRING
-  },
-  updatedAt: {
-    type : Sequelize.STRING
-  },
-  
-})
+    type: Sequelize.STRING
+  }
+});
+
+Gig.sync().then(() => {
+  console.log('table created');
+});
+module.exports = Gig;

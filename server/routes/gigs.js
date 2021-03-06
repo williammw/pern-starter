@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
 const Gig = require('../models/Gig');
+// import Gigs from '../models/Gigs'
 const Sequelize = require('sequelize');
 
 const Op = Sequelize.Op;

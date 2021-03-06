@@ -24,10 +24,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Index route
-app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
+app.get('/', (req, res) => res.send('INDEX'))//res.render('index', { layout: 'landing' }));
 
 // Gig routes
-app.use('/gigs', require('./routes/gigs'));
+app.use('/gigs', require('./routes/gigs'))
 
 const PORT = process.env.PORT || 5000;
 
