@@ -1,0 +1,19 @@
+<section id="users" class="container">
+    <h1>All users</h1>
+
+    {{#each users}}
+      <div class="user">
+        
+      <ul>
+        <li>userName :{{user_name}}</li> 
+        <li>displayName :{{display_name}}</li>
+        <li>email: {{email}}</li>
+        <li>isActivated: {{isActivated}}</li>
+      </ul>
+    
+    </div>
+    {{else}}
+      <p>No gigs available</p>
+    {{/each}}
+    
+  </section>
